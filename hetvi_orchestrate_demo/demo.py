@@ -11,12 +11,13 @@ for _, module_name, _ in pkgutil.iter_modules([TOOLS_DIR]):
 
 HELP = """
 Commands:
-  free <YYYY-MM-DD>                 # list slots
-  propose <YYYY-MM-DD> <HH:MM>      # draft email text
-  record <name> <YYYY-MM-DD> <HH:MM># log decision to data/decisions.csv
-  help                              # show this
-  exit                              # quit
+  free <YYYY-MM-DD>                         # List available time slots for that date
+  propose <name> <YYYY-MM-DD> <HH:MM>       # Draft an email proposal to that person
+  record <name> <YYYY-MM-DD> <HH:MM>        # Log a confirmed meeting to data/decisions.csv
+  help                                      # Show this help message
+  exit                                      # Quit the demo
 """
+
 
 def main():
     print("=== Interview Scheduler Agent (Local, Orchestrate-style) ===")
