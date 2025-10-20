@@ -1,6 +1,6 @@
 name: interview-scheduler
 description: "Proposes 30-min interview slots, drafts an email, and records a decision."
-model: "gpt-4o-mini"   # placeholder; in real Orchestrate you'd choose from `orchestrate models list`
+model: "gpt-4o-mini" 
 
 tools:
   - path: tools/availability.py

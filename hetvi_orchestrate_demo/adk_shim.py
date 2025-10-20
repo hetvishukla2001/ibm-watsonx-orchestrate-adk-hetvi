@@ -1,5 +1,3 @@
-# A tiny shim to mimic the Orchestrate ADK "tool" decorator and a registry.
-
 from typing import Callable, Dict, Any, List
 
 class ToolRegistry:
