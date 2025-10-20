@@ -1,0 +1,20 @@
+name: interview-scheduler
+description: "Proposes 30-min interview slots, drafts an email, and records a decision."
+model: "gpt-4o-mini"   # placeholder; in real Orchestrate you'd choose from `orchestrate models list`
+
+tools:
+  - path: tools/availability.py
+    name: get_free_slots
+    description: "List 30-min slots for a given YYYY-MM-DD."
+  - path: tools/propose.py
+    name: draft_proposal
+    description: "Draft an email snippet proposing the given slot."
+  - path: tools/record.py
+    name: record_choice
+    description: "Record the selected slot to a CSV log."
+
+routing:
+  strategy: "tool-first"
+  instructions: |
+    You are concise and professional. Use tools when the user asks about times,
+    proposing a slot, or recording a decision. Keep outputs short.
